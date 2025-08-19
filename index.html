@@ -163,6 +163,26 @@
             border-color: #dc2626;
         }
 
+        .product-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
         .product-name {
             font-weight: bold;
             color: #1f2937;
@@ -264,6 +284,16 @@
             background-clip: text;
             font-weight: bold;
         }
+
+        /* Estilos para productos sin imágenes específicas */
+        .placeholder-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            color: #6b7280;
+            font-size: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -271,7 +301,7 @@
         <div class="header">
             <div class="header-content">
                 <div class="logo">
-                    <img src="logo.jpeg"/>
+                    <img src="logo.jpeg" alt="Logo Distribuidora De Carnes Macías"/>
                 </div>
                 <h1>Distribuidora De Carnes Macías</h1>
                 <p class="subtitle">Lista De Precios De Productos Cárnicos</p>
@@ -294,7 +324,7 @@
 
         <div class="content">
             <div class="price-grid">
-                <!-- Productos principales -->
+                <!-- Productos para restaurante -->
                 <div class="section restaurant-section">
                     <h2>
                         <div class="section-icon">
@@ -305,7 +335,11 @@
                         Para Restaurante
                     </h2>
                     <div class="products-grid">
+                        <!-- Carne fileteada -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Carne fileteada</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -319,7 +353,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne entera -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Carne entera</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -333,7 +371,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne para estofado -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🍖</div>
+                            </div>
                             <div class="product-name">Carne para estofado</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -347,7 +389,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne para lomito -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Carne para lomito</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -361,7 +407,11 @@
                             </div>
                         </div>
 
+                        <!-- Hueso carnudo de nuca -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🦴</div>
+                            </div>
                             <div class="product-name">Hueso carnudo de nuca</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -375,7 +425,11 @@
                             </div>
                         </div>
 
+                        <!-- Costilla de res -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Costilla de res</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -389,7 +443,11 @@
                             </div>
                         </div>
 
+                        <!-- Hueso blanco -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🦴</div>
+                            </div>
                             <div class="product-name">Hueso blanco</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -403,7 +461,11 @@
                             </div>
                         </div>
 
+                        <!-- Hueso blanco con lagartillo -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🦴</div>
+                            </div>
                             <div class="product-name">Hueso blanco con lagartillo</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -417,7 +479,11 @@
                             </div>
                         </div>
 
+                        <!-- Hígado de res -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🫀</div>
+                            </div>
                             <div class="product-name">Hígado de res</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -431,7 +497,11 @@
                             </div>
                         </div>
 
+                        <!-- Filtrafa blanca -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Filtrafa blanca</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -445,7 +515,11 @@
                             </div>
                         </div>
 
+                        <!-- Filtrada roja -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Filtrada roja</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -459,7 +533,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne molida -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🫘</div>
+                            </div>
                             <div class="product-name">Carne molida</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -486,7 +564,11 @@
                         Para Tiendas
                     </h2>
                     <div class="products-grid">
+                        <!-- Carne fileteada -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Carne fileteada</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -500,7 +582,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne entera -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Carne entera</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -514,7 +600,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne para estofado -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🍖</div>
+                            </div>
                             <div class="product-name">Carne para estofado</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -528,7 +618,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne para lomito -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Carne para lomito</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -538,7 +632,11 @@
                             </div>
                         </div>
 
+                        <!-- Hueso carnudo de nuca -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🦴</div>
+                            </div>
                             <div class="product-name">Hueso carnudo de nuca</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -552,7 +650,11 @@
                             </div>
                         </div>
 
+                        <!-- Costilla de res -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🥩</div>
+                            </div>
                             <div class="product-name">Costilla de res</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -566,7 +668,11 @@
                             </div>
                         </div>
 
+                        <!-- Hueso blanco -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🦴</div>
+                            </div>
                             <div class="product-name">Hueso blanco</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -580,7 +686,11 @@
                             </div>
                         </div>
 
+                        <!-- Hueso blanco con lagartillo -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🦴</div>
+                            </div>
                             <div class="product-name">Hueso blanco con lagartillo</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -594,7 +704,11 @@
                             </div>
                         </div>
 
+                        <!-- Hígado de res -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🫀</div>
+                            </div>
                             <div class="product-name">Hígado de res</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -608,7 +722,11 @@
                             </div>
                         </div>
 
+                        <!-- Carne molida -->
                         <div class="product-card">
+                            <div class="product-image">
+                                <div class="placeholder-image">🫘</div>
+                            </div>
                             <div class="product-name">Carne molida</div>
                             <div class="price-table">
                                 <div class="price-row">
@@ -679,6 +797,44 @@
             }
         `;
         document.head.appendChild(style);
+
+        // Función para cambiar las imágenes placeholder por imágenes reales
+        function updateProductImages() {
+            const imageMap = {
+                'Carne fileteada': './assets/carnefileteada.jpeg',
+                'Carne entera': './assets/carneentera.jpeg', 
+                'Carne para estofado': './assets/estofadoentero.jpeg',
+                'Carne para lomito': './assets/carneparalomito.jpeg',
+                'Hueso carnudo de nuca': './assets/huesodenuca.jpeg',
+                'Costilla de res': './assets/costilladebrazo.jpeg',
+                'Hueso blanco': './assets/huesoblanco.jpeg',
+                'Hueso blanco con lagartillo': './assets/huesoconlagartillo.jpeg',
+                'Hígado de res': './assets/higadoderes.jpeg',
+                'Filtrafa blanca': './assets/imagen4.jpeg',
+                'Filtrada roja': './assets/imagen4.jpeg',
+                'Carne molida': './assets/carnemolida.jpeg'
+            };
+
+            // Esta función se puede usar para reemplazar los placeholders con imágenes reales
+            document.querySelectorAll('.product-card').forEach(card => {
+                const productName = card.querySelector('.product-name').textContent;
+                const placeholder = card.querySelector('.placeholder-image');
+                
+                if (imageMap[productName] && placeholder) {
+                    const img = document.createElement('img');
+                    img.src = imageMap[productName];
+                    img.alt = productName;
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'cover';
+                    
+                    placeholder.parentNode.replaceChild(img, placeholder);
+                }
+            });
+        }
+
+        // Descomenta la línea siguiente cuando tengas las imágenes disponibles
+         updateProductImages();
     </script>
 </body>
 </html>
