@@ -142,6 +142,10 @@
             border-left: 5px solid #1f2937;
         }
 
+        .store-section .section-icon {
+            background: #1f2937;
+        }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -155,6 +159,8 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .product-card:hover {
@@ -217,14 +223,6 @@
             font-size: 1rem;
         }
 
-        .restaurant-section .price-value {
-            color: #dc2626;
-        }
-
-        .store-section .section-icon {
-            background: #1f2937;
-        }
-
         .contact-info {
             background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
             color: white;
@@ -277,15 +275,6 @@
             }
         }
 
-        .highlight {
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: bold;
-        }
-
-        /* Estilos para productos sin imágenes específicas */
         .placeholder-image {
             display: flex;
             align-items: center;
@@ -312,597 +301,15 @@
                         </svg>
                         Para Restaurante
                     </div>
-                    <div class="category-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 13.5V22H13V16H11V22H9V13.5L3 7V9H1V7C1 5.9 1.9 5 3 5V3H5V5H19V3H21V5C22.1 5 23 5.9 23 7V9H21ZM16 5H8V7L12 11L16 7V5Z"/>
-                        </svg>
-                        Para Tiendas
-                    </div>
                 </div>
             </div>
         </div>
 
         <div class="content">
-            <div class="price-grid">
-                <!-- Productos para restaurante -->
-                <div class="section restaurant-section">
-                    <h2>
-                        <div class="section-icon">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.06 23H19.72C20.56 23 21.25 22.31 21.25 21.47V18.25C21.25 17.41 20.56 16.72 19.72 16.72H18.06C17.22 16.72 16.53 17.41 16.53 18.25V21.47C16.53 22.31 17.22 23 18.06 23ZM8.5 23H16V16.72H8.5C7.66 16.72 6.97 17.41 6.97 18.25V21.47C6.97 22.31 7.66 23 8.5 23ZM21.03 15H4.97C3.88 15 3 14.12 3 13.03V11.72C3 10.63 3.88 9.75 4.97 9.75H21.03C22.12 9.75 23 10.63 23 11.72V13.03C23 14.12 22.12 15 21.03 15ZM21.25 8H16.53V4.78C16.53 3.94 17.22 3.25 18.06 3.25H19.72C20.56 3.25 21.25 3.94 21.25 4.78V8ZM15 8H8.5V4.78C8.5 3.94 9.19 3.25 10.03 3.25H13.47C14.31 3.25 15 3.94 15 4.78V8ZM6.97 8V4.78C6.97 3.94 6.28 3.25 5.44 3.25H3.78C2.94 3.25 2.25 3.94 2.25 4.78V8C2.25 8.41 2.59 8.75 3 8.75C3.41 8.75 3.75 8.41 3.75 8V6.5H6.22V8H6.97Z"/>
-                            </svg>
-                        </div>
-                        Para Restaurante
-                    </h2>
-                    <div class="products-grid">
-                        <!-- Productos agregados por el usuario (corregidos) -->
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🥩</div></div>
-                            <div class="product-name">Pulpa fileteada</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$4.20</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🍢</div></div>
-                            <div class="product-name">Chucuzuela</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$1.50</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🍲</div></div>
-                            <div class="product-name">Mondongo</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$3.20</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🥩</div></div>
-                            <div class="product-name">Pulpa prieta</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$4.00</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🥩</div></div>
-                            <div class="product-name">Fileteada corriente</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$3.50</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🧂</div></div>
-                            <div class="product-name">Salón</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$4.00</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🥩</div></div>
-                            <div class="product-name">Lomo fino</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$6.00</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🐾</div></div>
-                            <div class="product-name">Pata</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$1.60</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🍲</div></div>
-                            <div class="product-name">Estofado</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$2.50</span></div></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image"><div class="placeholder-image">🥩</div></div>
-                            <div class="product-name">Costilla</div>
-                            <div class="price-table"><div class="price-row"><span class="price-label">Precio unitario</span><span class="price-value">$2.50</span></div></div>
-                        </div>
-                        <!-- Carne fileteada -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Carne fileteada</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$3.80</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$4.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne entera -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Carne entera</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$3.80</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$4.00</span>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- Productos agregados por el usuario -->
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🥩</div>
-                                </div>
-                                <div class="product-name">Pulpa fileteada</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$4.20</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🍢</div>
-                                </div>
-                                <div class="product-name">Chuzuzuela</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$1.50</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🍲</div>
-                                </div>
-                                <div class="product-name">Mondongo</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$3.20</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🥩</div>
-                                </div>
-                                <div class="product-name">Pulpa prieta</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$4.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🧂</div>
-                                </div>
-                                <div class="product-name">Sal</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$4.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🥩</div>
-                                </div>
-                                <div class="product-name">Lomo</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$6.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🐾</div>
-                                </div>
-                                <div class="product-name">Pata</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$1.60</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🍲</div>
-                                </div>
-                                <div class="product-name">Estofado</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$2.50</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="placeholder-image">🥩</div>
-                                </div>
-                                <div class="product-name">Costillas</div>
-                                <div class="price-table">
-                                    <div class="price-row">
-                                        <span class="price-label">Precio unitario</span>
-                                        <span class="price-value">$2.50</span>
-                                    </div>
-                                </div>
-                            </div>
-                        <!-- Carne para estofado -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🍖</div>
-                            </div>
-                            <div class="product-name">Carne para estofado</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$2.80</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$3.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne para lomito -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Carne para lomito</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$2.70</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$3.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hueso carnudo de nuca -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🦴</div>
-                            </div>
-                            <div class="product-name">Hueso carnudo de nuca</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$1.00</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$1.20</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Costilla de res -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Costilla de res</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$2.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$2.60</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hueso blanco -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🦴</div>
-                            </div>
-                            <div class="product-name">Hueso blanco</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$0.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$0.75</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hueso blanco con lagartillo -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🦴</div>
-                            </div>
-                            <div class="product-name">Hueso blanco con lagartillo</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$2.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$2.70</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hígado de res -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🫀</div>
-                            </div>
-                            <div class="product-name">Hígado de res</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$3.00</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$3.20</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Filtrafa blanca -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Filtrafa blanca</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$0.80</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$1.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Filtrada roja -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Filtrada roja</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$1.20</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$1.50</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne molida -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🫘</div>
-                            </div>
-                            <div class="product-name">Carne molida</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor especial (5lb+)</span>
-                                    <span class="price-value">$2.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor especial</span>
-                                    <span class="price-value">$2.70</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Para tiendas -->
-                <div class="section store-section">
-                    <h2>
-                        <div class="section-icon">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 13.5V22H13V16H11V22H9V13.5L3 7V9H1V7C1 5.9 1.9 5 3 5V3H5V5H19V3H21V5C22.1 5 23 5.9 23 7V9H21ZM16 5H8V7L12 11L16 7V5Z"/>
-                            </svg>
-                        </div>
-                        Para Tiendas
-                    </h2>
-                    <div class="products-grid">
-                        <!-- Carne fileteada -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Carne fileteada</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$3.40</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$3.50</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne entera -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Carne entera</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$3.40</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$3.50</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne para estofado -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🍖</div>
-                            </div>
-                            <div class="product-name">Carne para estofado</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$2.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$2.80</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne para lomito -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Carne para lomito</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$2.50</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hueso carnudo de nuca -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🦴</div>
-                            </div>
-                            <div class="product-name">Hueso carnudo de nuca</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$1.00</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$1.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Costilla de res -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🥩</div>
-                            </div>
-                            <div class="product-name">Costilla de res</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$2.30</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$2.40</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hueso blanco -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🦴</div>
-                            </div>
-                            <div class="product-name">Hueso blanco</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$0.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$0.75</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hueso blanco con lagartillo -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🦴</div>
-                            </div>
-                            <div class="product-name">Hueso blanco con lagartillo</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$2.50</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$2.70</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hígado de res -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🫀</div>
-                            </div>
-                            <div class="product-name">Hígado de res</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$3.00</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$3.20</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carne molida -->
-                        <div class="product-card">
-                            <div class="product-image">
-                                <div class="placeholder-image">🫘</div>
-                            </div>
-                            <div class="product-name">Carne molida</div>
-                            <div class="price-table">
-                                <div class="price-row">
-                                    <span class="price-label">X mayor (5lb+)</span>
-                                    <span class="price-value">$2.20</span>
-                                </div>
-                                <div class="price-row">
-                                    <span class="price-label">X menor</span>
-                                    <span class="price-value">$2.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="price-grid" id="priceGrid">
+                <!-- Content will be generated by JavaScript -->
             </div>
 
-            <!-- Información de contacto -->
             <div class="contact-info">
                 <h3>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
@@ -935,65 +342,139 @@
     </div>
 
     <script>
-        // Animación suave al cargar
-        window.addEventListener('load', function() {
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 50);
-            });
-        });
+        // Datos de productos
+        const productData = {
+            restaurant: [
+                // Productos con precios unitarios
+                { name: "Pulpa fileteada", emoji: "🥩", unitPrice: 4.20, image: null },
+                { name: "Chucuzuela", emoji: "🍢", unitPrice: 1.50, image: null },
+                { name: "Mondongo", emoji: "🍲", unitPrice: 3.20, image: null },
+                { name: "Pulpa prieta", emoji: "🥩", unitPrice: 4.00, image: null },
+                { name: "Fileteada corriente", emoji: "🥩", unitPrice: 3.50, image: null },
+                { name: "Salón", emoji: "🧂", unitPrice: 4.00, image: null },
+                { name: "Lomo fino", emoji: "🥩", unitPrice: 6.00, image: null },
+                { name: "Pata", emoji: "🐾", unitPrice: 1.60, image: null },
+                { name: "Estofado", emoji: "🍲", unitPrice: 2.50, image: null },
+                { name: "Costilla", emoji: "🥩", unitPrice: 2.50, image: null },
+                /*
+                // Productos con precios por mayor/menor especial
+                { name: "Carne fileteada", emoji: "🥩", mayorSpecial: 3.80, menorSpecial: 4.00, image: "./assets/carnefileteada.jpeg" },
+                { name: "Carne entera", emoji: "🥩", mayorSpecial: 3.80, menorSpecial: 4.00, image: "./assets/carneentera.jpeg" },
+                { name: "Carne para estofado", emoji: "🍖", mayorSpecial: 2.80, menorSpecial: 3.00, image: "./assets/estofadoentero.jpeg" },
+                { name: "Carne para lomito", emoji: "🥩", mayorSpecial: 2.70, menorSpecial: 3.00, image: "./assets/carneparalomito.jpeg" },
+                { name: "Hueso carnudo de nuca", emoji: "🦴", mayorSpecial: 1.00, menorSpecial: 1.20, image: "./assets/huesodenuca.jpeg" },
+                { name: "Costilla de res", emoji: "🥩", mayorSpecial: 2.50, menorSpecial: 2.60, image: "./assets/costilladebrazo.jpeg" },
+                { name: "Hueso blanco", emoji: "🦴", mayorSpecial: 0.50, menorSpecial: 0.75, image: "./assets/huesoblanco.jpeg" },
+                { name: "Hueso blanco con lagartillo", emoji: "🦴", mayorSpecial: 2.50, menorSpecial: 2.70, image: "./assets/huesoconlagartillo.jpeg" },
+                { name: "Hígado de res", emoji: "🫀", mayorSpecial: 3.00, menorSpecial: 3.20, image: "./assets/higadoderes.jpeg" },
+                { name: "Filtrafa blanca", emoji: "🥩", mayorSpecial: 0.80, menorSpecial: 1.00, image: null },
+                { name: "Filtrada roja", emoji: "🥩", mayorSpecial: 1.20, menorSpecial: 1.50, image: null },
+                { name: "Carne molida", emoji: "🫘", mayorSpecial: 2.50, menorSpecial: 2.70, image: "./assets/carnemolida.jpeg" }
+                 */
+            ]
+        };
 
-        // Inicializar animaciones
-        const style = document.createElement('style');
-        style.textContent = `
-            .product-card {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: all 0.6s ease;
+        // Función para crear una tarjeta de producto
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            
+            let imageContent = '';
+            if (product.image) {
+                imageContent = `<img src="${product.image}" alt="${product.name}" onerror="this.parentNode.innerHTML='<div class=\\"placeholder-image\\">${product.emoji}</div>'">`;
+            } else {
+                imageContent = `<div class="placeholder-image">${product.emoji}</div>`;
             }
-        `;
-        document.head.appendChild(style);
+            
+            let priceContent = '';
+            
+            if (product.unitPrice) {
+                // Producto con precio unitario
+                priceContent = `
+                    <div class="price-row">
+                        <span class="price-label">Precio unitario</span>
+                        <span class="price-value">${product.unitPrice.toFixed(2)}</span>
+                    </div>
+                `;
+            } else {
+                // Productos con precios especiales
+                priceContent = `
+                    <div class="price-row">
+                        <span class="price-label">X mayor especial (5lb+)</span>
+                        <span class="price-value">${product.mayorSpecial.toFixed(2)}</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">X menor especial</span>
+                        <span class="price-value">${product.menorSpecial.toFixed(2)}</span>
+                    </div>
+                `;
+            }
+            
+            card.innerHTML = `
+                <div class="product-image">
+                    ${imageContent}
+                </div>
+                <div class="product-name">${product.name}</div>
+                <div class="price-table">
+                    ${priceContent}
+                </div>
+            `;
+            
+            return card;
+        }
+        
 
-        // Función para cambiar las imágenes placeholder por imágenes reales
-        function updateProductImages() {
-            const imageMap = {
-                'Carne fileteada': './assets/carnefileteada.jpeg',
-                'Carne entera': './assets/carneentera.jpeg', 
-                'Carne para estofado': './assets/estofadoentero.jpeg',
-                'Carne para lomito': './assets/carneparalomito.jpeg',
-                'Hueso carnudo de nuca': './assets/huesodenuca.jpeg',
-                'Costilla de res': './assets/costilladebrazo.jpeg',
-                'Hueso blanco': './assets/huesoblanco.jpeg',
-                'Hueso blanco con lagartillo': './assets/huesoconlagartillo.jpeg',
-                'Hígado de res': './assets/higadoderes.jpeg',
-                //'Filtrafa blanca': './assets/imagen4.jpeg',
-                //'Filtrada roja': './assets/imagen4.jpeg',
-                'Carne molida': './assets/carnemolida.jpeg'
-            };
-
-            // Esta función se puede usar para reemplazar los placeholders con imágenes reales
-            document.querySelectorAll('.product-card').forEach(card => {
-                const productName = card.querySelector('.product-name').textContent;
-                const placeholder = card.querySelector('.placeholder-image');
-                
-                if (imageMap[productName] && placeholder) {
-                    const img = document.createElement('img');
-                    img.src = imageMap[productName];
-                    img.alt = productName;
-                    img.style.width = '100%';
-                    img.style.height = '100%';
-                    img.style.objectFit = 'cover';
-                    
-                    placeholder.parentNode.replaceChild(img, placeholder);
-                }
+        // Función para crear una sección completa
+        function createSection(title, products) {
+            const section = document.createElement('div');
+            section.className = 'section restaurant-section';
+            
+            const iconPath = "M18.06 23H19.72C20.56 23 21.25 22.31 21.25 21.47V18.25C21.25 17.41 20.56 16.72 19.72 16.72H18.06C17.22 16.72 16.53 17.41 16.53 18.25V21.47C16.53 22.31 17.22 23 18.06 23ZM8.5 23H16V16.72H8.5C7.66 16.72 6.97 17.41 6.97 18.25V21.47C6.97 22.31 7.66 23 8.5 23ZM21.03 15H4.97C3.88 15 3 14.12 3 13.03V11.72C3 10.63 3.88 9.75 4.97 9.75H21.03C22.12 9.75 23 10.63 23 11.72V13.03C23 14.12 22.12 15 21.03 15ZM21.25 8H16.53V4.78C16.53 3.94 17.22 3.25 18.06 3.25H19.72C20.56 3.25 21.25 3.94 21.25 4.78V8ZM15 8H8.5V4.78C8.5 3.94 9.19 3.25 10.03 3.25H13.47C14.31 3.25 15 3.94 15 4.78V8ZM6.97 8V4.78C6.97 3.94 6.28 3.25 5.44 3.25H3.78C2.94 3.25 2.25 3.94 2.25 4.78V8C2.25 8.41 2.59 8.75 3 8.75C3.41 8.75 3.75 8.41 3.75 8V6.5H6.22V8H6.97Z";
+            
+            section.innerHTML = `
+                <h2>
+                    <div class="section-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="${iconPath}"/>
+                        </svg>
+                    </div>
+                    ${title}
+                </h2>
+                <div class="products-grid" id="restaurant-products">
+                </div>
+            `;
+            
+            // Agregar productos a la grilla
+            const productsGrid = section.querySelector('.products-grid');
+            products.forEach(product => {
+                productsGrid.appendChild(createProductCard(product));
             });
+            
+            return section;
         }
 
-        // Descomenta la línea siguiente cuando tengas las imágenes disponibles
-         updateProductImages();
+        // Función para inicializar la página
+        function initializePage() {
+            const priceGrid = document.getElementById('priceGrid');
+            
+            // Crear sección de restaurante
+            const restaurantSection = createSection('Para Restaurante', productData.restaurant);
+            priceGrid.appendChild(restaurantSection);
+            
+            // Animar las tarjetas
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.product-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 50);
+                });
+            }, 100);
+        }
+
+        // Inicializar cuando se carga la página
+        window.addEventListener('load', initializePage);
     </script>
 </body>
 </html>
